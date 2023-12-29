@@ -1,0 +1,20 @@
+---
+interface Props {
+	href: string;
+	name: string;
+	desc: string;
+}
+
+const { href, name, desc } = Astro.props;
+---
+
+<div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+  <a href={href} target="_blank">
+    <div class="mb-5 bg-gray-700 p-4 rounded-md cursor-pointer hover:bg-gray-800">
+      <p class="text-white">{name}</p>
+      <p class="font-thin text-white">
+        {desc}
+      </p>
+    </div>
+  </a>
+</div>
