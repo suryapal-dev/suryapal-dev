@@ -3,11 +3,10 @@ interface Props {
 	href: string;
 	name: string;
 	desc: string;
-  isCurrent: boolean;
-  years: boolean;
+  years: string;
 }
 
-const { href, name, desc, isCurrent, years } = Astro.props;
+const { href, name, desc, years } = Astro.props;
 ---
 
 <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
@@ -19,7 +18,7 @@ const { href, name, desc, isCurrent, years } = Astro.props;
       </p>
 
       <div class="flex items-center justify-between">
-        <p class="mt-1 text-white">{!isCurrent ? (`From: ${years}`) : (`Current`)}</p>
+        <p class="mt-1 text-white">From: {years}</p>
       </div>
     </div>
   </a>
